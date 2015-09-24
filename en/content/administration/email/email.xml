@@ -122,7 +122,9 @@ In order to route mails in a specific queue using otrs.Console.pl use the follow
 
 <para>
 <screen>
+<![CDATA[
 | $SYS_HOME/bin/otrs.Console.pl Maint::PostMaster::Read --target-queue=QUEUENAME
+]]>
 </screen>
 </para>
 
@@ -132,7 +134,9 @@ When sorting to a subqueue, you must seperate the parent and child queue "::".
 
 <para>
 <screen>
+<![CDATA[
 | $SYS_HOME/bin/otrs.Console.pl Maint::PostMaster::Read --target-queue=QUEUENAME::SUBQUEUE
+]]> 
 </screen>
 </para>
 

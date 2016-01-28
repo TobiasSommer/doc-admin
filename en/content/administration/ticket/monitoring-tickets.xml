@@ -27,20 +27,20 @@ Ticket responsibility can be assigned by calling up the ticket content and click
 <figure>
     <title>Changing the Responsibility of a ticket in its zoomed view</title>
     <screenshot>
-         <graphic scale="40" fileref="screenshots/ticket-zoom-responsible.png"></graphic>
+         <graphic fileref="screenshots/administration/ticket/ticket-zoom-responsible.png" scalefit="1" width="100%" contentdepth="100%"></graphic>
     </screenshot>
 </figure>
 </para>
 
 <para>
-After clicking on "Responsible", a pop-up dialog to change the responsibility of that ticket will open (see Figure below). This dialog can also be used to send a message to the new responsible agent.
+After clicking on "Responsible", a pop-up dialog to change the responsibility of that ticket will open (see figure below). This dialog can also be used to send a message to the new responsible agent.
 </para>
 
 <para>
 <figure>
     <title>Pop-up dialog to change a ticket's responsibility</title>
     <screenshot>
-         <graphic scale="40" fileref="screenshots/ticket-responsible.png"></graphic>
+         <graphic fileref="screenshots/administration/ticket/ticket-responsible.png" scalefit="1" width="100%" contentdepth="100%"></graphic>
     </screenshot>
 </figure>
 </para>
@@ -63,40 +63,40 @@ The TicketWatcher feature can be activated with the configuration parameter <lin
 </para>
 
 <para>
-In order to watch a ticket, go to its zoomed view and click on the "Subscribe" link in the ticket activities menu (see Figure below).
+In order to watch a ticket, go to its zoomed view and click on the "Subscribe" link in the ticket activities menu (see figure below).
 </para>
 
 <para>
 <figure>
     <title>Subscribing to watching a ticket in its zoomed view</title>
     <screenshot>
-         <graphic scale="40" fileref="screenshots/ticket-subscribe.png"></graphic>
+         <graphic fileref="screenshots/administration/ticket/ticket-subscribe.png" scalefit="1" width="100%" contentdepth="100%"></graphic>
     </screenshot>
 </figure>
 </para>
 
 <para>
-If you no longer want to watch a specific ticket, go to its zoomed view and click on the "Unsubscribe" link in the ticket activities menu (see Figure below).
+If you no longer want to watch a specific ticket, go to its zoomed view and click on the "Unsubscribe" link in the ticket activities menu (see figure below).
 </para>
 
 <para>
 <figure>
     <title>Unsubscribing from watching a ticket in its zoomed view</title>
     <screenshot>
-         <graphic scale="40" fileref="screenshots/ticket-unsubscribe.png"></graphic>
+         <graphic fileref="screenshots/administration/ticket/ticket-unsubscribe.png" scalefit="1" width="100%" contentdepth="100%"></graphic>
     </screenshot>
 </figure>
 </para>
 
 <para>
-The list of all watched tickets can be accessed through the Watched view of the OTRS agent interface (see Figure below), as soon as the ticket watcher feature gets activated.
+The list of all watched tickets can be accessed through the Watched view of the OTRS agent interface (see figure below), as soon as the ticket watcher feature gets activated.
 </para>
 
 <para>
 <figure>
     <title>Watched tickets view</title>
     <screenshot>
-         <graphic scale="40" fileref="screenshots/ticket-subscribe-mailbox.png"></graphic>
+         <graphic fileref="screenshots/administration/ticket/ticket-subscribe-mailbox.png" scalefit="1" width="100%" contentdepth="100%"></graphic>
     </screenshot>
 </figure>
 </para>

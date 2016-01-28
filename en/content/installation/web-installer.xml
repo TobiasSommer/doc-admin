@@ -3,7 +3,7 @@
   "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd">
 
 <section id="web-installer">
-<title>Using the web installer</title>
+<title>Using the Web Installer</title>
 
 <para>
 You can use the OTRS Web Installer, after you installed the OTRS software, to set up and configure the OTRS database.
@@ -25,20 +25,20 @@ When the web installer starts, please follow the following steps to setup your s
 <figure>
     <title>Welcome screen</title>
     <screenshot>
-         <graphic scale="40" fileref="screenshots/installer1.png"></graphic>
+         <graphic fileref="screenshots/introduction/installation/installer1.png" scalefit="1" width="100%" contentdepth="100%"></graphic>
     </screenshot>
 </figure>
 </para>
 
 <para>
-2. Read the GNU Affero General Public License (see Figure below) and accept it, by clicking the corresponding button at the bottom of the page.
+2. Read the GNU Affero General Public License (see figure below) and accept it, by clicking the corresponding button at the bottom of the page.
 </para>
 
 <para>
 <figure>
     <title>GNU Affero General Public License</title>
     <screenshot>
-         <graphic scale="40" fileref="screenshots/installer2.png"></graphic>
+         <graphic fileref="screenshots/introduction/installation/installer2.png" scalefit="1" width="100%" contentdepth="100%"></graphic>
     </screenshot>
 </figure>
 </para>
@@ -54,7 +54,7 @@ After that, click the 'Next' button (see figure below).
 <figure>
     <title>Database Selection</title>
     <screenshot>
-         <graphic scale="40" fileref="screenshots/installer3.png"></graphic>
+         <graphic fileref="screenshots/introduction/installation/installer3.png" scalefit="1" width="100%" contentdepth="100%"></graphic>
     </screenshot>
 </figure>
 </para>
@@ -68,13 +68,13 @@ in the previous step, this screen might differ a little. Enter the credentials f
 <figure>
     <title>Database credentials</title>
     <screenshot>
-         <graphic scale="40" fileref="screenshots/installer4.png"></graphic>
+         <graphic fileref="screenshots/introduction/installation/installer4.png" scalefit="1" width="100%" contentdepth="100%"></graphic>
     </screenshot>
 </figure>
 </para>
 
 <para>
-5. Create a new database user, choose a name for the database and click on 'Next' (see Figure below).
+5. Create a new database user, choose a name for the database and click on 'Next' (see figure below).
 </para>
 
 <warning>
@@ -89,7 +89,7 @@ to remember this password.
 <figure>
     <title>Database settings</title>
     <screenshot>
-         <graphic scale="40" fileref="screenshots/installer5.png"></graphic>
+         <graphic fileref="screenshots/introduction/installation/installer5.png" scalefit="1" width="100%" contentdepth="100%"></graphic>
     </screenshot>
 </figure>
 </para>
@@ -102,39 +102,39 @@ to remember this password.
 <figure>
     <title>Successful database setup</title>
     <screenshot>
-         <graphic scale="40" fileref="screenshots/installer6.png"></graphic>
+         <graphic fileref="screenshots/introduction/installation/installer6.png" scalefit="1" width="100%" contentdepth="100%"></graphic>
     </screenshot>
 </figure>
 </para>
 
 <para>
-7. Provide all the required system settings and click on 'Next' (see Figure below).
+7. Provide all the required system settings and click on 'Next' (see figure below).
 </para>
 
 <para>
 <figure>
     <title>System settings</title>
     <screenshot>
-         <graphic scale="40" fileref="screenshots/installer7.png"></graphic>
+         <graphic fileref="screenshots/introduction/installation/installer7.png" scalefit="1" width="100%" contentdepth="100%"></graphic>
     </screenshot>
 </figure>
 </para>
 
 <para>
-8. If desired, you can provide the needed data to configure your inbound and outbound mail, or skip this step by pressing the right button at the bottom of the screen (see Figure below).
+8. If desired, you can provide the needed data to configure your inbound and outbound mail, or skip this step by pressing the right button at the bottom of the screen (see figure below).
 </para>
 
 <para>
 <figure>
     <title>Mail configuration</title>
     <screenshot>
-         <graphic scale="40" fileref="screenshots/installer8.png"></graphic>
+         <graphic fileref="screenshots/introduction/installation/installer8.png" scalefit="1" width="100%" contentdepth="100%"></graphic>
     </screenshot>
 </figure>
 </para>
 
 <para>
-9. Congratulations! Now the installation of OTRS is finished and you should be able to work with the system (see Figure below). To log into the web interface of OTRS, use the address
+9. Congratulations! Now the installation of OTRS is finished and you should be able to work with the system (see figure below). To log into the web interface of OTRS, use the address
 <ulink url="http://localhost/otrs/index.pl">
     <citetitle>http://localhost/otrs/index.pl</citetitle>
 </ulink>
@@ -151,7 +151,7 @@ Please write down the generated password for the 'root@localhost' account.
 <figure>
     <title>Web installer final screen</title>
     <screenshot>
-         <graphic scale="40" fileref="screenshots/installer9.png"></graphic>
+         <graphic fileref="screenshots/introduction/installation/installer9.png" scalefit="1" width="100%" contentdepth="100%"></graphic>
     </screenshot>
 </figure>
 </para>

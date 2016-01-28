@@ -4,7 +4,7 @@
 
 <book lang="ja">
     <bookinfo>
-        <title>OTRS 5 - Admin Manual</title>
+        <title>OTRS 5 - 管理 マニュアル</title>
 
         <!--        <edition>
 Cancún Beach (México)</edition> -->
@@ -30,9 +30,9 @@ Thiessmeier, Daniel Zamorano.
             </para>
 
             <para>
-                このドキュメントのソース・コードは<ulink
-url="http://otrs.github.io">github</ulink>のリポジトリ<ulink
-url="https://github.com/OTRS/doc-admin">doc-admin</ulink>で見つけることができます。
+                このドキュメントの原本は<ulink url="https://otrs.github.io">github</ulink>のリポジトリ<ulink
+url="https://github.com/OTRS/doc-admin">doc-admin</ulink>で見つけることができます。寄付は大歓迎です。<ulink
+url="https://www.transifex.com/otrs/OTRS/">Transifex</ulink>であなたの言語へ翻訳して貢献することもできます。
             </para>
 
             <para>
@@ -90,7 +90,7 @@ Corporation と、あるいは、その系列企業の登録商標です。
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="content/administration/stats.xml" />
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="content/administration/dynamicfields.xml" />
         <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="content/administration/genericinterface.xml" />
-        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="content/administration/scheduler.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="content/administration/daemon.xml" />
     </chapter>
 
     <chapter id="customization">

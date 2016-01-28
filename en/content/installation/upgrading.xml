@@ -27,7 +27,7 @@
     Within a single minor version you can skip patch level releases if you want to
     upgrade. For instance you can upgrade directly from OTRS 5 patchlevel 2 to version
     5 patchlevel 6. If you need to do such a "patch level upgrade", you should skip steps
-    6, 10, 11, 14 and 15.
+    6, 10, 11, 14, 17 and 18.
     </para>
 
     <para>
@@ -38,7 +38,7 @@
         <title>Step 1: Stop all relevant services</title>
 
         <para>
-        Please make sure there are no more running services or cronjobs that try to access OTRS.
+        Please make sure there are no more running services or cron jobs that try to access OTRS.
         This will depend on your service configuration, here is an example:
 
             <screen><![CDATA[
@@ -47,12 +47,19 @@ shell> /etc/init.d/postfix stop
 shell> /etc/init.d/apache stop
             ]]></screen>
 
-        Stop OTRS cronjobs and the scheduler (in this order):
+        Stop OTRS cron jobs and the scheduler or daemon (in this order) depending on the OTRS version
+        you are updating from:
 
             <screen><![CDATA[
 shell> cd /opt/otrs/
 shell> bin/Cron.sh stop
 shell> bin/otrs.Scheduler.pl -a stop
+            ]]></screen>
+        or
+            <screen><![CDATA[
+shell> cd /opt/otrs/
+shell> bin/Cron.sh stop
+shell> bin/otrs.Daemon.pl stop
             ]]></screen>
         </para>
     </section>
@@ -63,7 +70,7 @@ shell> bin/otrs.Scheduler.pl -a stop
         <para>
             <itemizedlist>
                 <listitem><para><filename>Kernel/Config.pm</filename></para></listitem>
-                <listitem><para><filename>Kernel/Config/GenericAgent.pm</filename></para></listitem>
+                <listitem><para><filename>Kernel/Config/GenericAgent.pm</filename> (only for reference, this file is not needed any more)</para></listitem>
                 <listitem><para><filename>Kernel/Config/Files/ZZZAuto.pm</filename></para></listitem>
                 <listitem><para><filename>var/*</filename></para></listitem>
                 <listitem><para>as well as the database</para></listitem>
@@ -95,7 +102,6 @@ shell> mv otrs-x.x.x otrs
                 <para>
                     <itemizedlist>
                         <listitem><para><filename>Kernel/Config.pm</filename></para></listitem>
-                        <listitem><para><filename>Kernel/Config/GenericAgent.pm</filename></para></listitem>
                         <listitem><para><filename>Kernel/Config/Files/ZZZAuto.pm</filename></para></listitem>
                     </itemizedlist>
                 </para>
@@ -114,7 +120,8 @@ shell> mv otrs-x.x.x otrs
                 <title>Restore article data</title>
 
                 <para>
-                    If you configured OTRS to store article data in the filesystem you have to restore the <filename>article</filename> folder to <filename>/opt/otrs/var/</filename>.
+                    If you configured OTRS to store article data in the filesystem you have to restore the <filename>article</filename> folder to <filename>/opt/otrs/var/</filename>
+                    or the folder specified in the SysConfig.
                 </para>
             </section>
 
@@ -332,8 +339,8 @@ $Self->{'NodeID'} =  '2';   # assign a unique value for every frontend server
         <para>
             The follow-up detection settings were reorganized. Now OTRS searches by default in
             email subject and references to detect follow-ups. Please check in AdminSysConfig
-            <literal>Ticket</literal> -> <literal>Core::PostMaster</literal> if you need to make any
-            changes to the follow up detection configuration (for example to search in body, attachments
+            <literal>Ticket</literal> -&gt; <literal>Core::PostMaster</literal> if you need to make any
+            changes to the follow-up detection configuration (for example to search in body, attachments
             or raw email content).
         </para>
     </section>
@@ -355,19 +362,19 @@ shell> /opt/otrs/bin/otrs.Daemon.pl start
     </section>
 
     <section role="NotInToc">
-        <title>Step 13: Update and activate cronjobs</title>
+        <title>Step 13: Update and activate cron jobs</title>
 
         <para>
             There are two default OTRS cron files in <filename>/opt/otrs/var/cron/*.dist</filename>,
             and their purpose is to make sure that the OTRS Daemon is running.
-            They need to be be activated by copying them without the ".dist" filename extension.
+            They need to be activated by copying them without the ".dist" filename extension.
 
             <screen><![CDATA[
 shell> cd /opt/otrs/var/cron
 shell> for foo in *.dist; do cp $foo `basename $foo .dist`; done
             ]]></screen>
 
-            To schedule these cronjobs on your system, you can use the script <filename>Cron.sh</filename>
+            To schedule these cron jobs on your system, you can use the script <filename>Cron.sh</filename>
             with the <literal>otrs</literal> user.
 
             <screen><![CDATA[
@@ -376,9 +383,9 @@ shell> /opt/otrs/bin/Cron.sh start
         </para>
         <para>
             Please note that if you had any custom cron jobs, you should consider moving them to SysConfig
-            (<literal>Daemon</literal> -> <literal>Daemon::SchedulerCronTaskManager::Task</literal>)
+            (<literal>Daemon</literal> -&gt; <literal>Daemon::SchedulerCronTaskManager::Task</literal>)
             to have them executed by the OTRS daemon as well.
-            You might also need to adapt the commandlines because now most OTRS commands are managed by
+            You might also need to adapt your custom scripts, because now most OTRS commands are managed by
             <filename>bin/otrs.Console.pl</filename> instead of single scripts.
         </para>
     </section>
@@ -398,12 +405,71 @@ shell> /opt/otrs/bin/Cron.sh start
             modifications to the new ticket notifications (recommended) or b) you can deactivate the new notifications
             and activate the old notifications again.
         </para>
+        <para>
+            Please also review the escalation notification recipient settings and see if they match with your expectations (agents who have the ticket in one of their custom queues vs. all agents with read permissions).
+            This was configured via a setting in the file <filename>Kernel/Config/GenericAgent.pm</filename> (now obsolete) previously and can now be controlled via the GUI for each notification separately.
+        </para>
     </section>
 
     <section role="NotInToc">
-        <title>Step 15: Setup bash autocompletion (optional)</title>
+        <title>Step 15: Update system registration (optional)</title>
         <para>
-            All regular OTRS commandline operations now happen via the otrs Console interface
+            If the system is already registered with OTRS Group, it is strongly recommended to update
+            the registration information at this time. This will update the registered version of
+            the system (among other changes) in the OTRS Group records, in order to get much accurate
+            information from the cloud services.
+        </para>
+        <para>
+            If you don't update the registration information manually, it will be done automatically
+            on a regular basis, but this could happen some hours or days after. During this
+            period it might be possible to get wrong information from cloud services like
+            <emphasis role="bold">OTRS Business Solution™</emphasis> updates.
+        </para>
+        <para>
+            <screen><![CDATA[
+shell> cd /opt/otrs/
+shell> bin/otrs.Console.pl Maint::Registration::UpdateSend --force
+shell> bin/otrs.Console.pl Maint::Cache::Delete
+            ]]></screen>
+        </para>
+    </section>
+
+    <section role="NotInToc">
+        <title>Step 16: Migrate custom Perl based GenericAgent jobs (optional)</title>
+        <para>
+            This is only relevant if you had any custom GenericAgent jobs in Perl OTRS 4 configuration files such as
+            <filename>Kernel/Config/GenericAgent.pm</filename> that cannot be handled with the regular ticket notifications.
+            Such jobs now need to be registered as OTRS Daemon cron tasks in the SysConfig
+            (<literal>Daemon</literal> -&gt; <literal>Daemon::SchedulerCronTaskManager::Task</literal>),
+            in order to be executed on a regular basis.
+        </para>
+        <para>
+            There are 5 settings in the SysConfig prepared for this purpose
+            (<literal>Daemon::SchedulerCronTaskManager::Task###GenericAgentFile1</literal> to
+            <literal>Daemon::SchedulerCronTaskManager::Task###GenericAgentFile5</literal>).
+            If more settings are needed they can be added in a custom SysConfig setting file.
+        </para>
+        <para>
+            Please replace "&lt;ModuleName&gt;" with the file that contains the custom GenericAgent
+            jobs configuration, e.g. <literal>Kernel::Config::GenericAgent</literal> for the file:
+            <filename>Kernel/Config/GenericAgent.pm</filename>, set the schedule to match the
+            periodicity as it was executed before, mark the setting as active and save the changes.
+        </para>
+        <note>
+            <para>
+                To get more information about other parameters that can be used while running the
+                GenericAgent jobs, please execute:
+                <screen><![CDATA[
+shell> bin/otrs.Console.pl Maint::GenericAgent::Run --help
+            ]]></screen>
+            </para>
+        </note>
+    </section>
+
+    <section role="NotInToc">
+        <title>Step 17: Setup bash autocompletion (optional)</title>
+        <para>
+            All regular OTRS command line operations now happen via the OTRS Console interface
             <filename>bin/otrs.Console.pl</filename>. This provides an auto completion
             for the bash shell which makes finding the right command and options much easier.
         </para>
@@ -420,7 +486,17 @@ shell> /opt/otrs/bin/Cron.sh start
     </section>
 
     <section role="NotInToc">
-        <title>Step 16: Well done!</title>
+        <title>Step 18: Review ticket action screen configurations (optional)</title>
+        <para>
+            Some ticket action screens like "Note" had default subjects in OTRS 4 (configurable via SysConfig,
+            <literal>Ticket::Frontend::AgentTicketNote###Subject</literal> in this case). These default subjects have been removed
+            to reduce the amount of potentially redundant/meaningless data. You might want to re-add them if
+            they are mandatory for you.
+        </para>
+    </section>
+
+    <section role="NotInToc">
+        <title>Step 19: Well done!</title>
         <para></para>
     </section>
 </section>

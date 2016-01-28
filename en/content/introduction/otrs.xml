@@ -39,7 +39,7 @@
         </para>
 
         <section>
-        <title>User interface</title>
+        <title>User Interface</title>
             <itemizedlist>
               <listitem>
                 <para>
@@ -84,7 +84,7 @@
             </itemizedlist>
         </section>
         <section>
-            <title>Mail interface</title>
+            <title>Email Interface</title>
             <itemizedlist>
               <listitem>
                 <para>
@@ -205,7 +205,7 @@
         </section>
 
         <section id="new-features-of-otrs-5">
-            <title>New features of OTRS 5</title>
+            <title>New Features of OTRS 5</title>
             <section>
                 <title>Productivity</title>
                 <itemizedlist>
@@ -233,7 +233,7 @@
                     <listitem>
                         <para>A new two-factor authentication layer allows added login security.</para>
                         <itemizedlist>
-                            <listitem><para>If entering a fixed username and password doesn’t satisfy your requirements, you can now additionally use the open standard for time based one-time passwords (RfC 6238, also known as Google Authenticator).</para></listitem>
+                            <listitem><para>If entering a fixed username and password doesn’t satisfy your requirements, you can now additionally use the open standard for time based one-time passwords (<ulink url="https://tools.ietf.org/html/rfc6238">RfC 6238</ulink>, also known as Google Authenticator).</para></listitem>
                             <listitem><para>After having enabled the two-factor authentication, agents and customers can add a shared secret to their preferences and immediately start logging in using one-time passwords created by a compatible method of their choice (e.g. the Android Google Authenticator app).</para></listitem>
                         </itemizedlist>
                     </listitem>
@@ -256,7 +256,7 @@
         </section>
 
         <section id="new-features-of-otrs-4">
-            <title>New features of OTRS 4</title>
+            <title>New Features of OTRS 4</title>
             <section>
                 <title>Productivity</title>
                 <itemizedlist>
@@ -343,7 +343,7 @@
         </section>
 
         <section id="new-features-of-otrs-3.3">
-            <title>New features of OTRS 3.3</title>
+            <title>New Features of OTRS 3.3</title>
             <section>
                 <title>Productivity</title>
                 <itemizedlist>
@@ -389,7 +389,7 @@
     </section>
 
     <section id="software-requirements">
-        <title>Hardware and software requirements</title>
+        <title>Hardware and Software Requirements</title>
 
         <para>
         OTRS can be installed on many different operating systems. OTRS can run on
@@ -482,7 +482,7 @@
             </para>
             <itemizedlist>
                 <listitem>
-                      <para>Internet Explorer before version 8</para>
+                      <para>Internet Explorer before version 10</para>
                 </listitem>
                 <listitem>
                       <para>Firefox before version 10</para>
@@ -492,9 +492,9 @@
                 </listitem>
             </itemizedlist>
             <para>
-                We recommend always using the latest version of your browser, because it has the best JavaScript and rendering performance.
-                Dramatical performance varieties between the used browsers can occur with big data or big systems.
-                We are happy to consult you on that matter.
+                We recommend keeping your browser up-to-date. JavaScript and rendering performance in newer versions is always improved.
+                Dramatic performance issues can be seen in larger systems when using older versions. We are happy to consult you on
+                that matter.
             </para>
         </section>
     </section>
@@ -521,7 +521,7 @@
         <title>Professional Services for OTRS</title>
 
         <para>
-            Our <ulink url="https://www.otrs.com/otrs-business-solution-improving-customer-service/">OTRS Business Solution</ulink>™ offers you best professional support from the OTRS team, reliable OTRS security and regular free updates as well as an <ulink url="https://www.otrs.com/otrs-business-solution-improving-customer-service/#OTRS-Business-Solution-Cloud-Services">exclusive set of additional Business Features</ulink> that you can flexibly activate or deactivate according to different deployment scenarios.
+            Our <ulink url="https://www.otrs.com/otrs-business-solution-improving-customer-service/">OTRS Business Solution</ulink>™ offers you best professional support from the OTRS team, reliable OTRS security and regular free updates as well as an <ulink url="https://www.otrs.com/solutions/otrs-business-solution-on-premise/#integrated-business-features">exclusive set of additional Business Features</ulink> that you can flexibly activate or deactivate according to different deployment scenarios.
         </para>
         <para>
             <ulink url="http://www.otrs.com/">The OTRS Group</ulink> offers specific

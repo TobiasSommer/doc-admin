@@ -3,7 +3,7 @@
   "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd">
 
 <chapter id="first-steps">
-<title>First steps</title>
+<title>First Steps</title>
 
 <abstract>
 <para>
@@ -12,7 +12,7 @@ The goal of this chapter is to provide a brief overview of OTRS and the structur
 </abstract>
 
 <section id="agent-interface">
-<title>Agent web interface</title>
+<title>Agent Web Interface</title>
 
 <para>
 The agent web interface allows agents to answer customer requests, create new tickets for customers or other agents, write tickets about telephone calls with customers, write FAQ entries, edit customer data, etc.
@@ -27,14 +27,14 @@ Supposing your OTRS host is reachable via the URL
 <ulink url="http://www.example.com/otrs/index.pl">
 <citetitle>http://www.example.com/otrs/index.pl</citetitle>
 </ulink>
-in a web browser (see Figure below).
+in a web browser (see figure below).
 </para>
 
 <para>
 <figure>
     <title>Login screen of the agent interface</title>
     <screenshot>
-         <graphic scale="40" fileref="screenshots/login.png"></graphic>
+         <graphic fileref="screenshots/introduction/firststeps/login.png" scalefit="1" width="100%" contentdepth="100%"></graphic>
     </screenshot>
 </figure>
 </para>
@@ -42,7 +42,7 @@ in a web browser (see Figure below).
 </section>
 
 <section id="customer-interface">
-<title>Customer web interface</title>
+<title>Customer Web Interface</title>
 
 <para>
 Customers have a separate web interface in OTRS through which they can create new accounts, change their account settings, create and edit tickets, get an overview on tickets that they have created, etc.
@@ -53,14 +53,14 @@ Continuing the above example, the customer login screen can be reached by using 
 <ulink url="http://www.example.com/otrs/customer.pl">
 <citetitle>http://www.example.com/otrs/customer.pl</citetitle>
 </ulink>
-with a web browser (see Figure below).
+with a web browser (see figure below).
 </para>
 
 <para>
 <figure>
     <title>Login screen of the customer interface</title>
     <screenshot>
-         <graphic scale="40" fileref="screenshots/customer-login.png"></graphic>
+         <graphic fileref="screenshots/introduction/firststeps/customer-login.png" scalefit="1" width="100%" contentdepth="100%"></graphic>
     </screenshot>
 </figure>
 </para>
@@ -68,7 +68,7 @@ with a web browser (see Figure below).
 </section>
 
 <section id="public-interface">
-<title>Public web interface</title>
+<title>Public Web Interface</title>
 
 <para>
 In addition to the web interfaces for agents and customers, OTRS also has a public web interface which is available through the FAQ-Module. This module needs to be installed separately. It provides public access to the FAQ system and lets visitors search through FAQ entries without any special authorization.
@@ -89,7 +89,7 @@ In our example, the public web interface can be reached via either of the follow
 <figure>
     <title>Public web interface</title>
     <screenshot>
-         <graphic scale="40" fileref="screenshots/public-interface.png"></graphic>
+         <graphic fileref="screenshots/introduction/firststeps/public-interface.png" scalefit="1" width="100%" contentdepth="100%"></graphic>
     </screenshot>
 </figure>
 </para>
@@ -97,7 +97,7 @@ In our example, the public web interface can be reached via either of the follow
 </section>
 
 <section id="first-login">
-<title>First login</title>
+<title>First Login</title>
 
 <para>
 Access the login screen as described in the section <link linkend="agent-interface">Agent web interface
@@ -115,14 +115,14 @@ If you don't want to login as OTRS administrator, just enter the user name and p
 </para>
 
 <para>
-In case you have forgotten your password, you can request the system for a new password. Simply press the link below the Login button, enter the mail address that is registered for your OTRS account into the input field, and press the Submit button (see Figure).
+In case you have forgotten your password, you can request the system for a new password. Simply press the link below the Login button, enter the mail address that is registered for your OTRS account into the input field, and press the Submit button (see figure).
 </para>
 
 <para>
 <figure>
     <title>Request new password</title>
     <screenshot>
-         <graphic scale="40" fileref="screenshots/request-new-password.png"></graphic>
+         <graphic fileref="screenshots/introduction/firststeps/request-new-password.png" scalefit="1" width="100%" contentdepth="100%"></graphic>
     </screenshot>
 </figure>
 </para>
@@ -130,17 +130,17 @@ In case you have forgotten your password, you can request the system for a new p
 </section>
 
 <section id="gui-overview">
-<title>The web interface - an overview</title>
+<title>The Web Interface - an Overview</title>
 
 <para>
-Upon successfully logging into the system, you are presented with the Dashboard page (see Figure below). It shows your locked tickets, allows direct access through menus to the queue, status and escalation views, and also holds options for creation of new phone and e-mail tickets. It also presents a quick summary of the tickets using different criteria.
+Upon successfully logging into the system, you are presented with the Dashboard page (see figure below). It shows your locked tickets, allows direct access through menus to the queue, status and escalation views, and also holds options for creation of new phone and e-mail tickets. It also presents a quick summary of the tickets using different criteria.
 </para>
 
 <para>
 <figure>
     <title>Dashboard of the agent interface</title>
     <screenshot>
-         <graphic scale="40" fileref="screenshots/first-screen.png"></graphic>
+         <graphic fileref="screenshots/introduction/firststeps/first-screen.png" scalefit="1" width="100%" contentdepth="100%"></graphic>
     </screenshot>
 </figure>
 </para>
@@ -170,7 +170,7 @@ These boxes contains the main part of each screen, usually they are displayed in
 </para>
 
 <para>
-Finally at the bottom of the page, the site footer is displayed (see Figure below). It contains links to directly access the OTRS official web site, or go to the Top of the page.
+Finally at the bottom of the page, the site footer is displayed (see figure below). It contains links to directly access the OTRS official web site, or go to the Top of the page.
 </para>
 
 <para>
@@ -181,7 +181,7 @@ Normally the icon row, navigation bar and footer are the same in all the screens
 <figure>
     <title>Footer</title>
     <screenshot>
-         <graphic scale="40" fileref="screenshots/footer.png"></graphic>
+         <graphic fileref="screenshots/introduction/firststeps/footer.png" scalefit="1" width="100%" contentdepth="100%"></graphic>
     </screenshot>
 </figure>
 </para>
@@ -220,7 +220,7 @@ Normally the icon row, navigation bar and footer are the same in all the screens
     <figure>
         <title>Dashboard widgets</title>
         <screenshot>
-             <graphic scale="40" fileref="screenshots/dashboard-left-column-widgets.png"></graphic>
+             <graphic fileref="screenshots/introduction/firststeps/dashboard-left-column-widgets.png" scalefit="1" width="100%" contentdepth="100%"></graphic>
         </screenshot>
     </figure>
 </para>
@@ -306,7 +306,7 @@ Normally the icon row, navigation bar and footer are the same in all the screens
             the end time, this times determine the duration of the event.
         </para>
         <para>
-            This widget includes the following views: month, week and day, agents can scroll through
+            This widget includes the following views: month, week and day. Agents can scroll through
             the pages by using the right and left arrows.
         </para>
         <para>
@@ -323,7 +323,7 @@ Normally the icon row, navigation bar and footer are the same in all the screens
             <figure>
                 <title>Events Ticket Calendar widget</title>
                 <screenshot>
-                     <graphic scale="40" fileref="screenshots/events-ticket-calendar.png"></graphic>
+                     <graphic fileref="screenshots/introduction/firststeps/events-ticket-calendar.png" scalefit="1" width="100%" contentdepth="100%"></graphic>
                 </screenshot>
             </figure>
         </para>
@@ -401,7 +401,7 @@ Normally the icon row, navigation bar and footer are the same in all the screens
     <figure>
         <title>Dashboard Settings</title>
         <screenshot>
-             <graphic scale="40" fileref="screenshots/edit-settings.png"></graphic>
+             <graphic fileref="screenshots/introduction/firststeps/edit-settings.png" scalefit="1" width="100%" contentdepth="100%"></graphic>
         </screenshot>
     </figure>
 </para>
@@ -448,7 +448,7 @@ Normally the icon row, navigation bar and footer are the same in all the screens
 </section>
 
 <section id="what-is-a-queue">
-<title>What is a queue?</title>
+<title>What is a Queue?</title>
 
 <para>
 On many mail systems, it is common for all messages to flow into an Inbox file, where they remain stored. New messages are appended at the end of the Inbox file. The mail client program used to read and write mails reads this Inbox file and presents the content to the user.
@@ -490,7 +490,7 @@ Improved system structures, such as through the proper design of queues, can lea
 
 
 <section id="what-is-the-queue-overview">
-<title>What is the queue overview?</title>
+<title>What is the Queue Overview?</title>
 
 <para>
 The queue overview offers a view of all queues in which tickets are present, and for which the user has RW permissions.
@@ -500,7 +500,7 @@ The queue overview offers a view of all queues in which tickets are present, and
 <figure>
     <title>Queue View (Default) for Agents</title>
     <screenshot>
-         <graphic scale="40" fileref="screenshots/agent-queue-view.png"></graphic>
+         <graphic fileref="screenshots/introduction/firststeps/agent-queue-view.png" scalefit="1" width="100%" contentdepth="100%"></graphic>
     </screenshot>
 </figure>
 </para>
@@ -525,7 +525,7 @@ There are visual alarms, to aid the user.
 <figure>
     <title>Agent Queue View visual alarms. </title>
     <screenshot>
-         <graphic scale="40" fileref="screenshots/agent-queue-overview-visual-alarms.png"></graphic>
+         <graphic fileref="screenshots/introduction/firststeps/agent-queue-overview-visual-alarms.png" scalefit="1" width="100%" contentdepth="100%"></graphic>
     </screenshot>
 </figure>
 </para>
@@ -548,16 +548,16 @@ There are visual alarms, to aid the user.
 </section>
 
 <section id="user-preferences">
-<title>User preferences</title>
+<title>User Preferences</title>
 <para>
-OTRS users such as customers, agents and the OTRS administrator can configure their account preferences as per their needs. Agent can access the configuration screen by clicking on their login name at the top right corner of the web interface (see Figure below), and customers must click on the "Preferences" link (see Figure below).
+OTRS users such as customers, agents and the OTRS administrator can configure their account preferences as per their needs. Agent can access the configuration screen by clicking on their login name at the top right corner of the web interface (see figure below), and customers must click on the "Preferences" link (see figure below).
 </para>
 
 <para>
 <figure>
     <title>Agent's personal preferences</title>
     <screenshot>
-         <graphic scale="40" fileref="screenshots/agent-preferences.png"></graphic>
+         <graphic fileref="screenshots/introduction/firststeps/agent-preferences.png" scalefit="1" width="100%" contentdepth="100%"></graphic>
     </screenshot>
 </figure>
 </para>
@@ -575,25 +575,15 @@ An agent can configure 3 different categories of preferences: user profile, emai
         <para>Adjust the interface language.</para>
     </listitem>
     <listitem>
-        <para>Switch the frontend skin.</para>
+        <para>Activate and configure the out-of-office time.</para>
     </listitem>
     <listitem>
         <para>Shift the frontend theme.</para>
     </listitem>
-    <listitem>
-        <para>Activate and configure the out-of-office time.</para>
-    </listitem>
 </itemizedlist>
 
 <itemizedlist>
-    <title>Email Settings</title>
-    <listitem>
-        <para>Select events that trigger email notifications to the agent.</para>
-    </listitem>
-</itemizedlist>
-
-<itemizedlist>
-    <title>Other Settings</title>
+    <title>Notification Settings</title>
     <listitem>
         <para>Select the queues you want to monitor in "My Queues".</para>
     </listitem>
@@ -601,7 +591,17 @@ An agent can configure 3 different categories of preferences: user profile, emai
         <para>Select the services you want to monitor in "My Services".</para>
     </listitem>
     <listitem>
-        <para>Set the refresh period for the overviews (Dashboard, LockedView, QueueView).</para>
+        <para>Configure which ticket notifications you want to receive (per transport method).</para>
+    </listitem>
+</itemizedlist>
+
+<itemizedlist>
+    <title>Other Settings</title>
+    <listitem>
+        <para>Switch the frontend skin.</para>
+    </listitem>
+    <listitem>
+        <para>Set the refresh period for the overviews (Dashboard, Queue View, etc.).</para>
     </listitem>
     <listitem>
         <para>Set the screen to be displayed after a ticket is created.</para>
@@ -612,7 +612,7 @@ An agent can configure 3 different categories of preferences: user profile, emai
 <figure>
     <title>Customer's personal preferences</title>
     <screenshot>
-         <graphic scale="40" fileref="screenshots/customer-preferences.png"></graphic>
+         <graphic fileref="screenshots/introduction/firststeps/customer-preferences.png" scalefit="1" width="100%" contentdepth="100%"></graphic>
     </screenshot>
 </figure>
 </para>
